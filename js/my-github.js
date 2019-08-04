@@ -9,8 +9,8 @@ fetch("https://api.github.com/users/milleymilli/repos")
     xClick.innerHTML = data.length;
     let reposi = "";
     data.forEach(element => {
-      reposi += `<li> Repository :<a href="${element.url}">${
-        element.url
+      reposi += `<li> Repository :<a href="${element.html_url}">${
+        element.html_url
       }</a> </li>`;
     });
     //console.log(reposi);
@@ -57,9 +57,9 @@ function fetchingUser(name) {
 
       let reposList = "";
       data.forEach(element => {
-        reposList += ` <li>Your Repository list: <a href="${element.url}">${
-          element.url
-        }</a></li>`;
+        reposList += ` <li>Your Repository list: <a href="${
+          element.html_url
+        }">${element.html_url}</a></li>`;
       });
       xClick.innerHTML = data.length;
       ownerName.innerHTML = name;
